@@ -53,7 +53,7 @@ namespace ShareV2
             var zip = ZipFile.Open(settings.WebPath + filename, ZipArchiveMode.Create);
             foreach (var file in paths)
             {
-                zip.CreateEntryFromFile(file, Path.GetFileName(file), CompressionLevel.Optimal);
+                zip.CreateEntryFromAny(file);
             }
             zip.Dispose();
             return settings.ExternalAdress + filename;
@@ -61,7 +61,7 @@ namespace ShareV2
 
         public string SaveFile(string path)
         {
-            File.Copy(path, settings.WebPath + HttpUtility.UrlEncode(Path.GetFileName(path)));
+            File.Copy(path, settings.WebPath + HttpUtility.UrlEncode(Path.GetFileName(path)), true);
             return settings.ExternalAdress + HttpUtility.UrlEncode(Path.GetFileName(path));
         }
 
