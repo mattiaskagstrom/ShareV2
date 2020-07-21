@@ -29,6 +29,7 @@ namespace ShareV2
             DropdownModifier1.SelectedIndex = DropdownModifier1.FindString(settings.ModifierKeys[0].ToString());
             DropdownModifier2.SelectedIndex = DropdownModifier2.FindString(settings.ModifierKeys[1].ToString());
             DropdownKey.SelectedIndex = DropdownKey.FindString(settings.Key.ToString().ToUpper());
+            TxtScreenshotDateTimeFormatString.Text = settings.ScreenshotDateTimeFormatString;
             SetKeyboardHook();
             FileManagement = new FileManagement(settings);
             this.Hide();
@@ -55,7 +56,12 @@ namespace ShareV2
         {
             if (File.Exists(path))
             {
-                return JsonSerializer.Deserialize<ApplicationSettings>(File.ReadAllText(path));
+                var settings = JsonSerializer.Deserialize<ApplicationSettings>(File.ReadAllText(path));
+                if (string.IsNullOrEmpty(settings.ScreenshotDateTimeFormatString))
+                {
+                    settings.ScreenshotDateTimeFormatString = "yyyy-dd-M--HH-mm-ss";
+                }
+                return settings;
             }
             else
             {
@@ -68,7 +74,8 @@ namespace ShareV2
                     StartWithWindows = false,
                     WebPath = "C:\\Xampp\\htdocs\\",
                     AddIndexToWebPath = false,
-                    MoveToTrash = true
+                    MoveToTrash = true,
+                    ScreenshotDateTimeFormatString = "yyyy-dd-M--HH-mm-ss"
                 };
             }
         }
@@ -312,6 +319,17 @@ namespace ShareV2
         private void SettingsForm_MouseClick(object sender, MouseEventArgs e)
         {
             this.ActiveControl = null;
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tostring?view=netframework-4.8#System_DateTime_ToString_System_String_");
+        }
+
+        private void TxtScreenshotDateTimeFormatString_TextChanged(object sender, EventArgs e)
+        {
+            settings.ScreenshotDateTimeFormatString = TxtScreenshotDateTimeFormatString.Text;
+            SaveChanges();
         }
     }
 }

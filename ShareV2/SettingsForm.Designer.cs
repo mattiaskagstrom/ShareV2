@@ -50,6 +50,9 @@
             this.ChbSendToTrash = new System.Windows.Forms.CheckBox();
             this.LblDirNotExisting = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtScreenshotDateTimeFormatString = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -282,11 +285,42 @@
             this.toolTip1.InitialDelay = 500;
             this.toolTip1.ReshowDelay = 100;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 224);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(153, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Screenshot datetime formatting";
+            // 
+            // TxtScreenshotDateTimeFormatString
+            // 
+            this.TxtScreenshotDateTimeFormatString.Location = new System.Drawing.Point(18, 240);
+            this.TxtScreenshotDateTimeFormatString.Name = "TxtScreenshotDateTimeFormatString";
+            this.TxtScreenshotDateTimeFormatString.Size = new System.Drawing.Size(158, 20);
+            this.TxtScreenshotDateTimeFormatString.TabIndex = 17;
+            this.TxtScreenshotDateTimeFormatString.TextChanged += new System.EventHandler(this.TxtScreenshotDateTimeFormatString_TextChanged);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(177, 243);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(29, 13);
+            this.linkLabel1.TabIndex = 18;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Help";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(238, 226);
+            this.ClientSize = new System.Drawing.Size(238, 272);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.TxtScreenshotDateTimeFormatString);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.LblDirNotExisting);
             this.Controls.Add(this.ChbSendToTrash);
             this.Controls.Add(this.DropdownKey);
@@ -338,6 +372,9 @@
         private System.Windows.Forms.CheckBox ChbSendToTrash;
         private System.Windows.Forms.Label LblDirNotExisting;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox TxtScreenshotDateTimeFormatString;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

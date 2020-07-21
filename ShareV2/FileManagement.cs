@@ -19,7 +19,8 @@ namespace ShareV2
 
         public string SaveImage(Image image)
         {
-            string filename = Guid.NewGuid() + ".jpeg";
+            
+            string filename = DateTime.Now.ToString(settings.ScreenshotDateTimeFormatString) + ".jpeg";
             image.Save(settings.WebPath + filename, ImageFormat.Jpeg);
             return settings.ExternalAdress + filename;
         }

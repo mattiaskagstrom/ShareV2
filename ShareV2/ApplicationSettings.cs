@@ -13,6 +13,7 @@ namespace ShareV2
         public bool MoveToTrash { get; set; }
         public List<ModifierKeys> ModifierKeys { get; set; }
         public Keys Key { get; set; }
-
+        
+        public string ScreenshotDateTimeFormatString { get; set; }
     }
 }
