@@ -15,6 +15,7 @@ namespace ShareV2
         static readonly string SettingsPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\ShareV2\\ApplicationSettings.json";
         static readonly ApplicationSettings settings = LoadSettings(SettingsPath);
         FileManagement FileManagement;
+        readonly LogForm logForm = new LogForm();
         public SettingsForm()
         {
             InitializeComponent();
@@ -30,8 +31,11 @@ namespace ShareV2
             DropdownModifier2.SelectedIndex = DropdownModifier2.FindString(settings.ModifierKeys[1].ToString());
             DropdownKey.SelectedIndex = DropdownKey.FindString(settings.Key.ToString().ToUpper());
             TxtScreenshotDateTimeFormatString.Text = settings.ScreenshotDateTimeFormatString;
+            ChbShouldShowProgressbar.Checked = settings.ShouldShowProgressbar;
+            TxtThreshold.Enabled = settings.ShouldShowProgressbar;
+            TxtThreshold.Text = settings.PopProgressDialogThreshold.ToString();
             SetKeyboardHook();
-            FileManagement = new FileManagement(settings);
+            FileManagement = new FileManagement(settings, logForm);
             this.Hide();
             this.ShowInTaskbar = false;
         }
@@ -61,6 +65,7 @@ namespace ShareV2
                 {
                     settings.ScreenshotDateTimeFormatString = "yyyy-dd-M--HH-mm-ss";
                 }
+
                 return settings;
             }
             else
@@ -75,7 +80,9 @@ namespace ShareV2
                     WebPath = "C:\\Xampp\\htdocs\\",
                     AddIndexToWebPath = false,
                     MoveToTrash = true,
-                    ScreenshotDateTimeFormatString = "yyyy-dd-M--HH-mm-ss"
+                    ScreenshotDateTimeFormatString = "yyyy-dd-M--HH-mm-ss",
+                    ShouldShowProgressbar = false,
+                    PopProgressDialogThreshold = 50000
                 };
             }
         }
@@ -108,7 +115,7 @@ namespace ShareV2
         private void SaveChanges()
         {
             SaveSettings(SettingsPath);
-            FileManagement = new FileManagement(settings);
+            FileManagement = new FileManagement(settings, logForm);
         }
 
         void Hook_KeyPressed(object sender, KeyPressedEventArgs e)
@@ -321,7 +328,7 @@ namespace ShareV2
             this.ActiveControl = null;
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tostring?view=netframework-4.8#System_DateTime_ToString_System_String_");
         }
@@ -330,6 +337,24 @@ namespace ShareV2
         {
             settings.ScreenshotDateTimeFormatString = TxtScreenshotDateTimeFormatString.Text;
             SaveChanges();
+        }
+
+        private void ChbShouldShowProgressbar_CheckedChanged(object sender, EventArgs e)
+        {
+            settings.ShouldShowProgressbar = ChbShouldShowProgressbar.Checked;
+            TxtThreshold.Enabled = settings.ShouldShowProgressbar;
+            SaveChanges();
+        }
+
+        private void TxtThreshold_TextChanged(object sender, EventArgs e)
+        {
+            settings.PopProgressDialogThreshold = int.Parse(TxtThreshold.Text);
+            SaveChanges();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            logForm.Show();
         }
     }
 }

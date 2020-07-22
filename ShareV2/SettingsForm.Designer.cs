@@ -53,6 +53,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.TxtScreenshotDateTimeFormatString = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ChbShouldShowProgressbar = new System.Windows.Forms.CheckBox();
+            this.TxtThreshold = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -288,7 +293,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 224);
+            this.label4.Location = new System.Drawing.Point(12, 223);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(153, 13);
             this.label4.TabIndex = 16;
@@ -296,7 +301,7 @@
             // 
             // TxtScreenshotDateTimeFormatString
             // 
-            this.TxtScreenshotDateTimeFormatString.Location = new System.Drawing.Point(18, 240);
+            this.TxtScreenshotDateTimeFormatString.Location = new System.Drawing.Point(15, 239);
             this.TxtScreenshotDateTimeFormatString.Name = "TxtScreenshotDateTimeFormatString";
             this.TxtScreenshotDateTimeFormatString.Size = new System.Drawing.Size(158, 20);
             this.TxtScreenshotDateTimeFormatString.TabIndex = 17;
@@ -305,19 +310,71 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(177, 243);
+            this.linkLabel1.Location = new System.Drawing.Point(177, 242);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(29, 13);
             this.linkLabel1.TabIndex = 18;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Help";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 282);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(196, 13);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Threshold for when to show progressbar";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(121, 301);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(20, 13);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Kb";
+            // 
+            // ChbShouldShowProgressbar
+            // 
+            this.ChbShouldShowProgressbar.AutoSize = true;
+            this.ChbShouldShowProgressbar.Location = new System.Drawing.Point(15, 262);
+            this.ChbShouldShowProgressbar.Name = "ChbShouldShowProgressbar";
+            this.ChbShouldShowProgressbar.Size = new System.Drawing.Size(164, 17);
+            this.ChbShouldShowProgressbar.TabIndex = 22;
+            this.ChbShouldShowProgressbar.Text = "Show progressbar for big files";
+            this.ChbShouldShowProgressbar.UseVisualStyleBackColor = true;
+            this.ChbShouldShowProgressbar.CheckedChanged += new System.EventHandler(this.ChbShouldShowProgressbar_CheckedChanged);
+            // 
+            // TxtThreshold
+            // 
+            this.TxtThreshold.Location = new System.Drawing.Point(15, 298);
+            this.TxtThreshold.Name = "TxtThreshold";
+            this.TxtThreshold.Size = new System.Drawing.Size(100, 20);
+            this.TxtThreshold.TabIndex = 23;
+            this.TxtThreshold.TextChanged += new System.EventHandler(this.TxtThreshold_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(147, 295);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Show log";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(238, 272);
+            this.ClientSize = new System.Drawing.Size(238, 331);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.TxtThreshold);
+            this.Controls.Add(this.ChbShouldShowProgressbar);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.TxtScreenshotDateTimeFormatString);
             this.Controls.Add(this.label4);
@@ -375,6 +432,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TxtScreenshotDateTimeFormatString;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox ChbShouldShowProgressbar;
+        private System.Windows.Forms.TextBox TxtThreshold;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -10,16 +10,19 @@ namespace ShareV2
 {
     class FileManagement
     {
-        private ApplicationSettings settings;
+        private readonly ApplicationSettings settings;
 
-        public FileManagement(ApplicationSettings settings)
+        private readonly ILogInterface Logger;
+
+        public FileManagement(ApplicationSettings settings, ILogInterface log)
         {
             this.settings = settings;
+            Logger = log;
         }
 
         public string SaveImage(Image image)
         {
-            
+
             string filename = DateTime.Now.ToString(settings.ScreenshotDateTimeFormatString) + ".jpeg";
             image.Save(settings.WebPath + filename, ImageFormat.Jpeg);
             return settings.ExternalAdress + filename;
@@ -51,10 +54,12 @@ namespace ShareV2
         public string SaveZipFromMultipleFiles(List<string> paths)
         {
             string filename = Guid.NewGuid() + ".zip";
+            Logger.Log("Creating " + filename);
             var zip = ZipFile.Open(settings.WebPath + filename, ZipArchiveMode.Create);
-            foreach (var file in paths)
+            for (int i = 0; i < paths.Count; i++)
             {
-                zip.CreateEntryFromAny(file);
+                Logger.Log("Adding file " + i + " of " + paths.Count + "(" + paths[i] + ")");
+                zip.CreateEntryFromAny(paths[i]);
             }
             zip.Dispose();
             return settings.ExternalAdress + filename;
@@ -62,7 +67,21 @@ namespace ShareV2
 
         public string SaveFile(string path)
         {
-            File.Copy(path, settings.WebPath + HttpUtility.UrlEncode(Path.GetFileName(path)), true);
+            Logger.Log("Copying " + path);
+            if (settings.ShouldShowProgressbar && new FileInfo(path).Length * 1000 >= settings.PopProgressDialogThreshold)
+            {
+                Microsoft.VisualBasic.FileIO.FileSystem.CopyFile(
+                    path,
+                    settings.WebPath + HttpUtility.UrlEncode(Path.GetFileName(path)),
+                    Microsoft.VisualBasic.FileIO.UIOption.AllDialogs,
+                    Microsoft.VisualBasic.FileIO.UICancelOption.ThrowException
+                );
+            }
+            else
+            {
+                File.Copy(path, settings.WebPath + HttpUtility.UrlEncode(Path.GetFileName(path)), true);
+            }
+            Logger.Log("Copied " + path);
             return settings.ExternalAdress + HttpUtility.UrlEncode(Path.GetFileName(path));
         }
 
