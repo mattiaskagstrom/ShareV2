@@ -58,50 +58,37 @@
             this.ChbShouldShowProgressbar = new System.Windows.Forms.CheckBox();
             this.TxtThreshold = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.ChbShouldAutoSolveFilenameConflicts = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Web path:";
             // 
             // TxtWebLocation
             // 
-            this.TxtWebLocation.Location = new System.Drawing.Point(15, 26);
+            resources.ApplyResources(this.TxtWebLocation, "TxtWebLocation");
             this.TxtWebLocation.Name = "TxtWebLocation";
-            this.TxtWebLocation.Size = new System.Drawing.Size(161, 20);
-            this.TxtWebLocation.TabIndex = 1;
             this.TxtWebLocation.TextChanged += new System.EventHandler(this.TxtWebLocation_TextChanged);
             // 
             // TxtExternalAdress
             // 
-            this.TxtExternalAdress.Location = new System.Drawing.Point(15, 66);
+            resources.ApplyResources(this.TxtExternalAdress, "TxtExternalAdress");
             this.TxtExternalAdress.Name = "TxtExternalAdress";
-            this.TxtExternalAdress.Size = new System.Drawing.Size(161, 20);
-            this.TxtExternalAdress.TabIndex = 3;
             this.TxtExternalAdress.TextChanged += new System.EventHandler(this.TxtExternalAdress_TextChanged);
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 49);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "External adress:";
             // 
             // BtnBrowseFolder
             // 
-            this.BtnBrowseFolder.Location = new System.Drawing.Point(180, 24);
+            resources.ApplyResources(this.BtnBrowseFolder, "BtnBrowseFolder");
             this.BtnBrowseFolder.Name = "BtnBrowseFolder";
-            this.BtnBrowseFolder.Size = new System.Drawing.Size(51, 23);
-            this.BtnBrowseFolder.TabIndex = 4;
-            this.BtnBrowseFolder.Text = "Browse";
             this.BtnBrowseFolder.UseVisualStyleBackColor = true;
             this.BtnBrowseFolder.Click += new System.EventHandler(this.BtnBrowseFolder_Click);
             // 
@@ -111,45 +98,28 @@
             // 
             // ChbDeleteOnExit
             // 
-            this.ChbDeleteOnExit.AutoSize = true;
-            this.ChbDeleteOnExit.Location = new System.Drawing.Point(15, 132);
+            resources.ApplyResources(this.ChbDeleteOnExit, "ChbDeleteOnExit");
             this.ChbDeleteOnExit.Name = "ChbDeleteOnExit";
-            this.ChbDeleteOnExit.Size = new System.Drawing.Size(151, 17);
-            this.ChbDeleteOnExit.TabIndex = 5;
-            this.ChbDeleteOnExit.Text = "Delete on shutdown/close";
             this.ChbDeleteOnExit.UseVisualStyleBackColor = true;
             this.ChbDeleteOnExit.CheckedChanged += new System.EventHandler(this.ChbDeleteOnExit_CheckedChanged);
             // 
             // ChbStartWithWindows
             // 
-            this.ChbStartWithWindows.AutoSize = true;
-            this.ChbStartWithWindows.Location = new System.Drawing.Point(15, 177);
+            resources.ApplyResources(this.ChbStartWithWindows, "ChbStartWithWindows");
             this.ChbStartWithWindows.Name = "ChbStartWithWindows";
-            this.ChbStartWithWindows.Size = new System.Drawing.Size(117, 17);
-            this.ChbStartWithWindows.TabIndex = 6;
-            this.ChbStartWithWindows.Text = "Start with Windows";
             this.ChbStartWithWindows.UseVisualStyleBackColor = true;
             this.ChbStartWithWindows.CheckedChanged += new System.EventHandler(this.ChbStartWithWindows_CheckedChanged);
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 89);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Key combination:";
             // 
             // ChbAddIndexToWebPath
             // 
-            this.ChbAddIndexToWebPath.AutoSize = true;
-            this.ChbAddIndexToWebPath.Location = new System.Drawing.Point(15, 200);
+            resources.ApplyResources(this.ChbAddIndexToWebPath, "ChbAddIndexToWebPath");
             this.ChbAddIndexToWebPath.Name = "ChbAddIndexToWebPath";
-            this.ChbAddIndexToWebPath.Size = new System.Drawing.Size(154, 17);
-            this.ChbAddIndexToWebPath.TabIndex = 9;
-            this.ChbAddIndexToWebPath.Text = "Add index.html to web path";
-            this.toolTip1.SetToolTip(this.ChbAddIndexToWebPath, "Adds a index.html to the web path directory. This will disable the autogenerated " +
-        "file index by your webserver.");
+            this.toolTip1.SetToolTip(this.ChbAddIndexToWebPath, resources.GetString("ChbAddIndexToWebPath.ToolTip"));
             this.ChbAddIndexToWebPath.UseVisualStyleBackColor = true;
             this.ChbAddIndexToWebPath.CheckedChanged += new System.EventHandler(this.ChbAddIndexToWebPath_CheckedChanged);
             // 
@@ -157,87 +127,79 @@
             // 
             this.DropdownModifier1.FormattingEnabled = true;
             this.DropdownModifier1.Items.AddRange(new object[] {
-            "None",
-            "Alt",
-            "Shift",
-            "Ctrl",
-            "Win"});
-            this.DropdownModifier1.Location = new System.Drawing.Point(15, 105);
+            resources.GetString("DropdownModifier1.Items"),
+            resources.GetString("DropdownModifier1.Items1"),
+            resources.GetString("DropdownModifier1.Items2"),
+            resources.GetString("DropdownModifier1.Items3"),
+            resources.GetString("DropdownModifier1.Items4")});
+            resources.ApplyResources(this.DropdownModifier1, "DropdownModifier1");
             this.DropdownModifier1.Name = "DropdownModifier1";
-            this.DropdownModifier1.Size = new System.Drawing.Size(48, 21);
-            this.DropdownModifier1.TabIndex = 10;
             this.DropdownModifier1.SelectedIndexChanged += new System.EventHandler(this.DropdownModifier1_SelectedIndexChanged);
             // 
             // DropdownModifier2
             // 
             this.DropdownModifier2.FormattingEnabled = true;
             this.DropdownModifier2.Items.AddRange(new object[] {
-            "None",
-            "Alt",
-            "Shift",
-            "Ctrl",
-            "Win"});
-            this.DropdownModifier2.Location = new System.Drawing.Point(69, 105);
+            resources.GetString("DropdownModifier2.Items"),
+            resources.GetString("DropdownModifier2.Items1"),
+            resources.GetString("DropdownModifier2.Items2"),
+            resources.GetString("DropdownModifier2.Items3"),
+            resources.GetString("DropdownModifier2.Items4")});
+            resources.ApplyResources(this.DropdownModifier2, "DropdownModifier2");
             this.DropdownModifier2.Name = "DropdownModifier2";
-            this.DropdownModifier2.Size = new System.Drawing.Size(48, 21);
-            this.DropdownModifier2.TabIndex = 11;
             this.DropdownModifier2.SelectedIndexChanged += new System.EventHandler(this.DropdownModifier2_SelectedIndexChanged);
             // 
             // DropdownKey
             // 
             this.DropdownKey.FormattingEnabled = true;
             this.DropdownKey.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "I",
-            "J",
-            "K",
-            "L",
-            "M",
-            "N",
-            "O",
-            "P",
-            "Q",
-            "R",
-            "S",
-            "T",
-            "U",
-            "V",
-            "W",
-            "X",
-            "Y",
-            "Z",
-            "Å",
-            "Ä",
-            "Ö",
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9"});
-            this.DropdownKey.Location = new System.Drawing.Point(123, 105);
+            resources.GetString("DropdownKey.Items"),
+            resources.GetString("DropdownKey.Items1"),
+            resources.GetString("DropdownKey.Items2"),
+            resources.GetString("DropdownKey.Items3"),
+            resources.GetString("DropdownKey.Items4"),
+            resources.GetString("DropdownKey.Items5"),
+            resources.GetString("DropdownKey.Items6"),
+            resources.GetString("DropdownKey.Items7"),
+            resources.GetString("DropdownKey.Items8"),
+            resources.GetString("DropdownKey.Items9"),
+            resources.GetString("DropdownKey.Items10"),
+            resources.GetString("DropdownKey.Items11"),
+            resources.GetString("DropdownKey.Items12"),
+            resources.GetString("DropdownKey.Items13"),
+            resources.GetString("DropdownKey.Items14"),
+            resources.GetString("DropdownKey.Items15"),
+            resources.GetString("DropdownKey.Items16"),
+            resources.GetString("DropdownKey.Items17"),
+            resources.GetString("DropdownKey.Items18"),
+            resources.GetString("DropdownKey.Items19"),
+            resources.GetString("DropdownKey.Items20"),
+            resources.GetString("DropdownKey.Items21"),
+            resources.GetString("DropdownKey.Items22"),
+            resources.GetString("DropdownKey.Items23"),
+            resources.GetString("DropdownKey.Items24"),
+            resources.GetString("DropdownKey.Items25"),
+            resources.GetString("DropdownKey.Items26"),
+            resources.GetString("DropdownKey.Items27"),
+            resources.GetString("DropdownKey.Items28"),
+            resources.GetString("DropdownKey.Items29"),
+            resources.GetString("DropdownKey.Items30"),
+            resources.GetString("DropdownKey.Items31"),
+            resources.GetString("DropdownKey.Items32"),
+            resources.GetString("DropdownKey.Items33"),
+            resources.GetString("DropdownKey.Items34"),
+            resources.GetString("DropdownKey.Items35"),
+            resources.GetString("DropdownKey.Items36"),
+            resources.GetString("DropdownKey.Items37"),
+            resources.GetString("DropdownKey.Items38")});
+            resources.ApplyResources(this.DropdownKey, "DropdownKey");
             this.DropdownKey.Name = "DropdownKey";
-            this.DropdownKey.Size = new System.Drawing.Size(51, 21);
-            this.DropdownKey.TabIndex = 12;
             this.DropdownKey.SelectedIndexChanged += new System.EventHandler(this.DropdownKey_SelectedIndexChanged);
             // 
             // notifyIcon1
             // 
             this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "Copy - Share";
-            this.notifyIcon1.Visible = true;
+            resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon1_MouseDoubleClick);
             // 
             // contextMenuStrip1
@@ -246,43 +208,32 @@
             this.CtxMenuOpen,
             this.CtxMenuExit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(104, 48);
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
             // CtxMenuOpen
             // 
             this.CtxMenuOpen.Name = "CtxMenuOpen";
-            this.CtxMenuOpen.Size = new System.Drawing.Size(103, 22);
-            this.CtxMenuOpen.Text = "Open";
+            resources.ApplyResources(this.CtxMenuOpen, "CtxMenuOpen");
             this.CtxMenuOpen.Click += new System.EventHandler(this.CtxMenuOpen_Click);
             // 
             // CtxMenuExit
             // 
             this.CtxMenuExit.Name = "CtxMenuExit";
-            this.CtxMenuExit.Size = new System.Drawing.Size(103, 22);
-            this.CtxMenuExit.Text = "Exit";
+            resources.ApplyResources(this.CtxMenuExit, "CtxMenuExit");
             this.CtxMenuExit.Click += new System.EventHandler(this.CtxMenuExit_Click);
             // 
             // ChbSendToTrash
             // 
-            this.ChbSendToTrash.AutoSize = true;
-            this.ChbSendToTrash.Location = new System.Drawing.Point(15, 154);
+            resources.ApplyResources(this.ChbSendToTrash, "ChbSendToTrash");
             this.ChbSendToTrash.Name = "ChbSendToTrash";
-            this.ChbSendToTrash.Size = new System.Drawing.Size(215, 17);
-            this.ChbSendToTrash.TabIndex = 14;
-            this.ChbSendToTrash.Text = "Move files to recycle bin when deleteing";
             this.ChbSendToTrash.UseVisualStyleBackColor = true;
             this.ChbSendToTrash.CheckedChanged += new System.EventHandler(this.ChbSendToTrash_CheckedChanged);
             // 
             // LblDirNotExisting
             // 
-            this.LblDirNotExisting.AutoSize = true;
+            resources.ApplyResources(this.LblDirNotExisting, "LblDirNotExisting");
             this.LblDirNotExisting.ForeColor = System.Drawing.Color.Red;
-            this.LblDirNotExisting.Location = new System.Drawing.Point(65, 10);
             this.LblDirNotExisting.Name = "LblDirNotExisting";
-            this.LblDirNotExisting.Size = new System.Drawing.Size(120, 13);
-            this.LblDirNotExisting.TabIndex = 15;
-            this.LblDirNotExisting.Text = "Directory does not exist!";
-            this.LblDirNotExisting.Visible = false;
             // 
             // toolTip1
             // 
@@ -292,84 +243,72 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 223);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 13);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Screenshot datetime formatting";
             // 
             // TxtScreenshotDateTimeFormatString
             // 
-            this.TxtScreenshotDateTimeFormatString.Location = new System.Drawing.Point(15, 239);
+            resources.ApplyResources(this.TxtScreenshotDateTimeFormatString, "TxtScreenshotDateTimeFormatString");
             this.TxtScreenshotDateTimeFormatString.Name = "TxtScreenshotDateTimeFormatString";
-            this.TxtScreenshotDateTimeFormatString.Size = new System.Drawing.Size(158, 20);
-            this.TxtScreenshotDateTimeFormatString.TabIndex = 17;
             this.TxtScreenshotDateTimeFormatString.TextChanged += new System.EventHandler(this.TxtScreenshotDateTimeFormatString_TextChanged);
             // 
             // linkLabel1
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(177, 242);
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(29, 13);
-            this.linkLabel1.TabIndex = 18;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Help";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 282);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(196, 13);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Threshold for when to show progressbar";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(121, 301);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(20, 13);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Kb";
             // 
             // ChbShouldShowProgressbar
             // 
-            this.ChbShouldShowProgressbar.AutoSize = true;
-            this.ChbShouldShowProgressbar.Location = new System.Drawing.Point(15, 262);
+            resources.ApplyResources(this.ChbShouldShowProgressbar, "ChbShouldShowProgressbar");
             this.ChbShouldShowProgressbar.Name = "ChbShouldShowProgressbar";
-            this.ChbShouldShowProgressbar.Size = new System.Drawing.Size(164, 17);
-            this.ChbShouldShowProgressbar.TabIndex = 22;
-            this.ChbShouldShowProgressbar.Text = "Show progressbar for big files";
             this.ChbShouldShowProgressbar.UseVisualStyleBackColor = true;
             this.ChbShouldShowProgressbar.CheckedChanged += new System.EventHandler(this.ChbShouldShowProgressbar_CheckedChanged);
             // 
             // TxtThreshold
             // 
-            this.TxtThreshold.Location = new System.Drawing.Point(15, 298);
+            resources.ApplyResources(this.TxtThreshold, "TxtThreshold");
             this.TxtThreshold.Name = "TxtThreshold";
-            this.TxtThreshold.Size = new System.Drawing.Size(100, 20);
-            this.TxtThreshold.TabIndex = 23;
             this.TxtThreshold.TextChanged += new System.EventHandler(this.TxtThreshold_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(147, 295);
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Show log";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // ChbShouldAutoSolveFilenameConflicts
+            // 
+            resources.ApplyResources(this.ChbShouldAutoSolveFilenameConflicts, "ChbShouldAutoSolveFilenameConflicts");
+            this.ChbShouldAutoSolveFilenameConflicts.Name = "ChbShouldAutoSolveFilenameConflicts";
+            this.ChbShouldAutoSolveFilenameConflicts.UseVisualStyleBackColor = true;
+            this.ChbShouldAutoSolveFilenameConflicts.CheckedChanged += new System.EventHandler(this.ChbShouldAutoSolveFilenameConflicts_CheckedChanged);
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // SettingsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(238, 331);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.ChbShouldAutoSolveFilenameConflicts);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TxtThreshold);
             this.Controls.Add(this.ChbShouldShowProgressbar);
@@ -393,10 +332,8 @@
             this.Controls.Add(this.TxtWebLocation);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "SettingsForm";
-            this.Text = "Copy - Share";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SettingsForm_FormClosing);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SettingsForm_MouseClick);
@@ -437,6 +374,8 @@
         private System.Windows.Forms.CheckBox ChbShouldShowProgressbar;
         private System.Windows.Forms.TextBox TxtThreshold;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox ChbShouldAutoSolveFilenameConflicts;
+        private System.Windows.Forms.Button button2;
     }
 }
 

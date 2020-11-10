@@ -117,481 +117,45 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
-  </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>94, 13</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Web path:</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="TxtWebLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 26</value>
-  </data>
-  <data name="TxtWebLocation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 20</value>
-  </data>
-  <data name="TxtWebLocation.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;TxtWebLocation.Name" xml:space="preserve">
-    <value>TxtWebLocation</value>
-  </data>
-  <data name="&gt;&gt;TxtWebLocation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TxtWebLocation.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TxtWebLocation.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="TxtExternalAdress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 66</value>
-  </data>
-  <data name="TxtExternalAdress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 20</value>
-  </data>
-  <data name="TxtExternalAdress.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;TxtExternalAdress.Name" xml:space="preserve">
-    <value>TxtExternalAdress</value>
-  </data>
-  <data name="&gt;&gt;TxtExternalAdress.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TxtExternalAdress.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TxtExternalAdress.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 49</value>
+    <value>Webbens sökväg:</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 13</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>74, 13</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>External adress:</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="BtnBrowseFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 24</value>
-  </data>
-  <data name="BtnBrowseFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 23</value>
-  </data>
-  <data name="BtnBrowseFolder.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>Extern adress:</value>
   </data>
   <data name="BtnBrowseFolder.Text" xml:space="preserve">
-    <value>Browse</value>
-  </data>
-  <data name="&gt;&gt;BtnBrowseFolder.Name" xml:space="preserve">
-    <value>BtnBrowseFolder</value>
-  </data>
-  <data name="&gt;&gt;BtnBrowseFolder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BtnBrowseFolder.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;BtnBrowseFolder.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <metadata name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="ChbDeleteOnExit.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ChbDeleteOnExit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 132</value>
+    <value>Öppna</value>
   </data>
   <data name="ChbDeleteOnExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 17</value>
-  </data>
-  <data name="ChbDeleteOnExit.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>158, 17</value>
   </data>
   <data name="ChbDeleteOnExit.Text" xml:space="preserve">
-    <value>Delete on shutdown/close</value>
-  </data>
-  <data name="&gt;&gt;ChbDeleteOnExit.Name" xml:space="preserve">
-    <value>ChbDeleteOnExit</value>
-  </data>
-  <data name="&gt;&gt;ChbDeleteOnExit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ChbDeleteOnExit.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ChbDeleteOnExit.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="ChbStartWithWindows.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ChbStartWithWindows.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 177</value>
+    <value>Radera filer vid avstängning</value>
   </data>
   <data name="ChbStartWithWindows.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 17</value>
-  </data>
-  <data name="ChbStartWithWindows.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>124, 17</value>
   </data>
   <data name="ChbStartWithWindows.Text" xml:space="preserve">
-    <value>Start with Windows</value>
-  </data>
-  <data name="&gt;&gt;ChbStartWithWindows.Name" xml:space="preserve">
-    <value>ChbStartWithWindows</value>
-  </data>
-  <data name="&gt;&gt;ChbStartWithWindows.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ChbStartWithWindows.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ChbStartWithWindows.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 89</value>
+    <value>Starta med Windows</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 13</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>98, 13</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Key combination:</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="ChbAddIndexToWebPath.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ChbAddIndexToWebPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 200</value>
+    <value>Knappkombination:</value>
   </data>
   <data name="ChbAddIndexToWebPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 17</value>
-  </data>
-  <data name="ChbAddIndexToWebPath.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>189, 17</value>
   </data>
   <data name="ChbAddIndexToWebPath.Text" xml:space="preserve">
-    <value>Add index.html to web path</value>
-  </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>442, 19</value>
-  </metadata>
-  <data name="ChbAddIndexToWebPath.ToolTip" xml:space="preserve">
-    <value>Adds a index.html to the web path directory. This will disable the autogenerated file index by your webserver.</value>
-  </data>
-  <data name="&gt;&gt;ChbAddIndexToWebPath.Name" xml:space="preserve">
-    <value>ChbAddIndexToWebPath</value>
-  </data>
-  <data name="&gt;&gt;ChbAddIndexToWebPath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ChbAddIndexToWebPath.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ChbAddIndexToWebPath.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="DropdownModifier1.Items" xml:space="preserve">
-    <value>None</value>
-  </data>
-  <data name="DropdownModifier1.Items1" xml:space="preserve">
-    <value>Alt</value>
-  </data>
-  <data name="DropdownModifier1.Items2" xml:space="preserve">
-    <value>Shift</value>
-  </data>
-  <data name="DropdownModifier1.Items3" xml:space="preserve">
-    <value>Ctrl</value>
-  </data>
-  <data name="DropdownModifier1.Items4" xml:space="preserve">
-    <value>Win</value>
-  </data>
-  <data name="DropdownModifier1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 105</value>
-  </data>
-  <data name="DropdownModifier1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 21</value>
-  </data>
-  <data name="DropdownModifier1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;DropdownModifier1.Name" xml:space="preserve">
-    <value>DropdownModifier1</value>
-  </data>
-  <data name="&gt;&gt;DropdownModifier1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DropdownModifier1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;DropdownModifier1.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="DropdownModifier2.Items" xml:space="preserve">
-    <value>None</value>
-  </data>
-  <data name="DropdownModifier2.Items1" xml:space="preserve">
-    <value>Alt</value>
-  </data>
-  <data name="DropdownModifier2.Items2" xml:space="preserve">
-    <value>Shift</value>
-  </data>
-  <data name="DropdownModifier2.Items3" xml:space="preserve">
-    <value>Ctrl</value>
-  </data>
-  <data name="DropdownModifier2.Items4" xml:space="preserve">
-    <value>Win</value>
-  </data>
-  <data name="DropdownModifier2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 105</value>
-  </data>
-  <data name="DropdownModifier2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 21</value>
-  </data>
-  <data name="DropdownModifier2.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;DropdownModifier2.Name" xml:space="preserve">
-    <value>DropdownModifier2</value>
-  </data>
-  <data name="&gt;&gt;DropdownModifier2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DropdownModifier2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;DropdownModifier2.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="DropdownKey.Items" xml:space="preserve">
-    <value>A</value>
-  </data>
-  <data name="DropdownKey.Items1" xml:space="preserve">
-    <value>B</value>
-  </data>
-  <data name="DropdownKey.Items2" xml:space="preserve">
-    <value>C</value>
-  </data>
-  <data name="DropdownKey.Items3" xml:space="preserve">
-    <value>D</value>
-  </data>
-  <data name="DropdownKey.Items4" xml:space="preserve">
-    <value>E</value>
-  </data>
-  <data name="DropdownKey.Items5" xml:space="preserve">
-    <value>F</value>
-  </data>
-  <data name="DropdownKey.Items6" xml:space="preserve">
-    <value>G</value>
-  </data>
-  <data name="DropdownKey.Items7" xml:space="preserve">
-    <value>H</value>
-  </data>
-  <data name="DropdownKey.Items8" xml:space="preserve">
-    <value>I</value>
-  </data>
-  <data name="DropdownKey.Items9" xml:space="preserve">
-    <value>J</value>
-  </data>
-  <data name="DropdownKey.Items10" xml:space="preserve">
-    <value>K</value>
-  </data>
-  <data name="DropdownKey.Items11" xml:space="preserve">
-    <value>L</value>
-  </data>
-  <data name="DropdownKey.Items12" xml:space="preserve">
-    <value>M</value>
-  </data>
-  <data name="DropdownKey.Items13" xml:space="preserve">
-    <value>N</value>
-  </data>
-  <data name="DropdownKey.Items14" xml:space="preserve">
-    <value>O</value>
-  </data>
-  <data name="DropdownKey.Items15" xml:space="preserve">
-    <value>P</value>
-  </data>
-  <data name="DropdownKey.Items16" xml:space="preserve">
-    <value>Q</value>
-  </data>
-  <data name="DropdownKey.Items17" xml:space="preserve">
-    <value>R</value>
-  </data>
-  <data name="DropdownKey.Items18" xml:space="preserve">
-    <value>S</value>
-  </data>
-  <data name="DropdownKey.Items19" xml:space="preserve">
-    <value>T</value>
-  </data>
-  <data name="DropdownKey.Items20" xml:space="preserve">
-    <value>U</value>
-  </data>
-  <data name="DropdownKey.Items21" xml:space="preserve">
-    <value>V</value>
-  </data>
-  <data name="DropdownKey.Items22" xml:space="preserve">
-    <value>W</value>
-  </data>
-  <data name="DropdownKey.Items23" xml:space="preserve">
-    <value>X</value>
-  </data>
-  <data name="DropdownKey.Items24" xml:space="preserve">
-    <value>Y</value>
-  </data>
-  <data name="DropdownKey.Items25" xml:space="preserve">
-    <value>Z</value>
-  </data>
-  <data name="DropdownKey.Items26" xml:space="preserve">
-    <value>Å</value>
-  </data>
-  <data name="DropdownKey.Items27" xml:space="preserve">
-    <value>Ä</value>
-  </data>
-  <data name="DropdownKey.Items28" xml:space="preserve">
-    <value>Ö</value>
-  </data>
-  <data name="DropdownKey.Items29" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="DropdownKey.Items30" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="DropdownKey.Items31" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="DropdownKey.Items32" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="DropdownKey.Items33" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="DropdownKey.Items34" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="DropdownKey.Items35" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="DropdownKey.Items36" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="DropdownKey.Items37" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="DropdownKey.Items38" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="DropdownKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 105</value>
-  </data>
-  <data name="DropdownKey.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 21</value>
-  </data>
-  <data name="DropdownKey.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;DropdownKey.Name" xml:space="preserve">
-    <value>DropdownKey</value>
-  </data>
-  <data name="&gt;&gt;DropdownKey.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DropdownKey.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;DropdownKey.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>186, 17</value>
-  </metadata>
-  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>299, 17</value>
-  </metadata>
-  <data name="CtxMenuOpen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 22</value>
-  </data>
-  <data name="CtxMenuOpen.Text" xml:space="preserve">
-    <value>Open</value>
-  </data>
-  <data name="CtxMenuExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 22</value>
-  </data>
-  <data name="CtxMenuExit.Text" xml:space="preserve">
-    <value>Exit</value>
-  </data>
-  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 48</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
-    <value>contextMenuStrip1</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Lägg index.html i webbens sökväg</value>
   </data>
   <data name="notifyIcon1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -6486,329 +6050,47 @@
         APAPAAA=
 </value>
   </data>
-  <data name="notifyIcon1.Text" xml:space="preserve">
-    <value>Copy - Share</value>
-  </data>
-  <data name="notifyIcon1.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ChbSendToTrash.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ChbSendToTrash.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 154</value>
-  </data>
   <data name="ChbSendToTrash.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 17</value>
-  </data>
-  <data name="ChbSendToTrash.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>214, 17</value>
   </data>
   <data name="ChbSendToTrash.Text" xml:space="preserve">
-    <value>Move files to recycle bin when deleteing</value>
-  </data>
-  <data name="&gt;&gt;ChbSendToTrash.Name" xml:space="preserve">
-    <value>ChbSendToTrash</value>
-  </data>
-  <data name="&gt;&gt;ChbSendToTrash.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ChbSendToTrash.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ChbSendToTrash.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="LblDirNotExisting.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>Flytta filer till papperskorgen vid radering</value>
   </data>
   <data name="LblDirNotExisting.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 10</value>
+    <value>106, 10</value>
   </data>
   <data name="LblDirNotExisting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 13</value>
-  </data>
-  <data name="LblDirNotExisting.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>95, 13</value>
   </data>
   <data name="LblDirNotExisting.Text" xml:space="preserve">
-    <value>Directory does not exist!</value>
-  </data>
-  <data name="LblDirNotExisting.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;LblDirNotExisting.Name" xml:space="preserve">
-    <value>LblDirNotExisting</value>
-  </data>
-  <data name="&gt;&gt;LblDirNotExisting.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LblDirNotExisting.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;LblDirNotExisting.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 223</value>
+    <value>Sökvägen finns ej!</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 13</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>168, 13</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Screenshot datetime formatting</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="TxtScreenshotDateTimeFormatString.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 239</value>
-  </data>
-  <data name="TxtScreenshotDateTimeFormatString.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 20</value>
-  </data>
-  <data name="TxtScreenshotDateTimeFormatString.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;TxtScreenshotDateTimeFormatString.Name" xml:space="preserve">
-    <value>TxtScreenshotDateTimeFormatString</value>
-  </data>
-  <data name="&gt;&gt;TxtScreenshotDateTimeFormatString.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TxtScreenshotDateTimeFormatString.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TxtScreenshotDateTimeFormatString.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="linkLabel1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>177, 242</value>
+    <value>Format för filnamn till skärmdumpar</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 13</value>
-  </data>
-  <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+    <value>31, 13</value>
   </data>
   <data name="linkLabel1.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
-    <value>linkLabel1</value>
-  </data>
-  <data name="&gt;&gt;linkLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;linkLabel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 282</value>
+    <value>Hjälp</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 13</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+    <value>194, 13</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>Threshold for when to show progress bar</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 301</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 13</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Kb</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="ChbShouldShowProgressbar.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ChbShouldShowProgressbar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 262</value>
+    <value>Tröskelvärde för att visa återstående tid</value>
   </data>
   <data name="ChbShouldShowProgressbar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 17</value>
-  </data>
-  <data name="ChbShouldShowProgressbar.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
+    <value>179, 17</value>
   </data>
   <data name="ChbShouldShowProgressbar.Text" xml:space="preserve">
-    <value>Show progressbar for big files</value>
-  </data>
-  <data name="&gt;&gt;ChbShouldShowProgressbar.Name" xml:space="preserve">
-    <value>ChbShouldShowProgressbar</value>
-  </data>
-  <data name="&gt;&gt;ChbShouldShowProgressbar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ChbShouldShowProgressbar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ChbShouldShowProgressbar.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="TxtThreshold.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 298</value>
-  </data>
-  <data name="TxtThreshold.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="TxtThreshold.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;TxtThreshold.Name" xml:space="preserve">
-    <value>TxtThreshold</value>
-  </data>
-  <data name="&gt;&gt;TxtThreshold.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TxtThreshold.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TxtThreshold.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 295</value>
-  </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
+    <value>Visa återstående tid för stora filer</value>
   </data>
   <data name="button1.Text" xml:space="preserve">
-    <value>Show log</value>
-  </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="ChbShouldAutoSolveFilenameConflicts.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ChbShouldAutoSolveFilenameConflicts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 331</value>
-  </data>
-  <data name="ChbShouldAutoSolveFilenameConflicts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 17</value>
-  </data>
-  <data name="ChbShouldAutoSolveFilenameConflicts.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="ChbShouldAutoSolveFilenameConflicts.Text" xml:space="preserve">
-    <value>Auto solve filename conflicts</value>
-  </data>
-  <data name="&gt;&gt;ChbShouldAutoSolveFilenameConflicts.Name" xml:space="preserve">
-    <value>ChbShouldAutoSolveFilenameConflicts</value>
-  </data>
-  <data name="&gt;&gt;ChbShouldAutoSolveFilenameConflicts.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ChbShouldAutoSolveFilenameConflicts.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ChbShouldAutoSolveFilenameConflicts.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 350</value>
-  </data>
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="button2.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>button2</value>
-  </data>
-  <data name="&gt;&gt;button2.Name" xml:space="preserve">
-    <value>button2</value>
-  </data>
-  <data name="&gt;&gt;button2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>238, 385</value>
+    <value>Visa logg</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -12702,44 +11984,5 @@
         APAPAADABwAAgAMAAIABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAACAAwAAwAcA
         APAPAAA=
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Copy - Share</value>
-  </data>
-  <data name="&gt;&gt;folderBrowserDialog1.Name" xml:space="preserve">
-    <value>folderBrowserDialog1</value>
-  </data>
-  <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;notifyIcon1.Name" xml:space="preserve">
-    <value>notifyIcon1</value>
-  </data>
-  <data name="&gt;&gt;notifyIcon1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CtxMenuOpen.Name" xml:space="preserve">
-    <value>CtxMenuOpen</value>
-  </data>
-  <data name="&gt;&gt;CtxMenuOpen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CtxMenuExit.Name" xml:space="preserve">
-    <value>CtxMenuExit</value>
-  </data>
-  <data name="&gt;&gt;CtxMenuExit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
-    <value>toolTip1</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>SettingsForm</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

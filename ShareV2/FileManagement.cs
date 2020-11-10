@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Globalization;
 using System.IO;
 using System.IO.Compression;
-using System.Web;
+using Microsoft.VisualBasic.FileIO;
 
 namespace ShareV2
 {
@@ -22,10 +24,11 @@ namespace ShareV2
 
         public string SaveImage(Image image)
         {
-
-            string filename = DateTime.Now.ToString(settings.ScreenshotDateTimeFormatString) + ".jpeg";
-            image.Save(settings.WebPath + filename, ImageFormat.Jpeg);
-            return settings.ExternalAdress + filename;
+            string filename = GenerateFilename(SaveType.Screenshot);
+            Logger.Log("Saving " + filename);
+            image.Save(filename, ImageFormat.Jpeg);
+            Logger.Log("Saved " + filename);
+            return GetExternalAdressFromPath(filename);
         }
 
         public string SaveFileOrDirectory(string path)
@@ -42,27 +45,23 @@ namespace ShareV2
 
         public string SaveDirectory(string path)
         {
-            int i = 0;
-            while (File.Exists(settings.WebPath + HttpUtility.UrlEncode(new DirectoryInfo(path).Name) + (i == 0 ? "" : i.ToString()) + ".zip"))
-            {
-                i++;
-            }
-            ZipFile.CreateFromDirectory(path, settings.WebPath + HttpUtility.UrlEncode(new DirectoryInfo(path).Name) + (i == 0 ? "" : i.ToString()) + ".zip", CompressionLevel.Optimal, false);
-            return settings.ExternalAdress + HttpUtility.UrlEncode(new DirectoryInfo(path).Name) + (i == 0 ? "" : i.ToString()) + ".zip";
+            var filename = GenerateFilename(SaveType.Zip);
+            ZipFile.CreateFromDirectory(path, filename, CompressionLevel.Optimal, false);
+            return GetExternalAdressFromPath(filename);
         }
 
         public string SaveZipFromMultipleFiles(List<string> paths)
         {
-            string filename = Guid.NewGuid() + ".zip";
+            var filename = GenerateFilename(SaveType.Zip);
             Logger.Log("Creating " + filename);
-            var zip = ZipFile.Open(settings.WebPath + filename, ZipArchiveMode.Create);
+            var zip = ZipFile.Open(filename, ZipArchiveMode.Create);
             for (int i = 0; i < paths.Count; i++)
             {
                 Logger.Log("Adding file " + i + " of " + paths.Count + "(" + paths[i] + ")");
                 zip.CreateEntryFromAny(paths[i]);
             }
             zip.Dispose();
-            return settings.ExternalAdress + filename;
+            return GetExternalAdressFromPath(filename);
         }
 
         public string SaveFile(string path)
@@ -70,19 +69,28 @@ namespace ShareV2
             Logger.Log("Copying " + path);
             if (settings.ShouldShowProgressbar && new FileInfo(path).Length * 1000 >= settings.PopProgressDialogThreshold)
             {
-                Microsoft.VisualBasic.FileIO.FileSystem.CopyFile(
+                FileSystem.CopyFile(
                     path,
-                    settings.WebPath + HttpUtility.UrlEncode(Path.GetFileName(path)),
-                    Microsoft.VisualBasic.FileIO.UIOption.AllDialogs,
-                    Microsoft.VisualBasic.FileIO.UICancelOption.ThrowException
+                    settings.WebPath + Path.GetFileName(path),
+                    UIOption.AllDialogs,
+                    UICancelOption.DoNothing
                 );
+            }
+            else if(settings.ShouldAutoResolveFilenames)
+            {
+                File.Copy(path, GenerateFilename(SaveType.File, path));
             }
             else
             {
-                File.Copy(path, settings.WebPath + HttpUtility.UrlEncode(Path.GetFileName(path)), true);
+                FileSystem.CopyFile(
+                    path,
+                    settings.WebPath + Path.GetFileName(path),
+                    UIOption.OnlyErrorDialogs,
+                    UICancelOption.DoNothing
+                );
             }
             Logger.Log("Copied " + path);
-            return settings.ExternalAdress + HttpUtility.UrlEncode(Path.GetFileName(path));
+            return settings.ExternalAdress + Uri.EscapeDataString(Path.GetFileName(path));
         }
 
         public void DeleteWebPathContents()
@@ -91,19 +99,76 @@ namespace ShareV2
             {
                 if (settings.DeleteOnExit)
                 {
-                    var sendToTrash = Microsoft.VisualBasic.FileIO.RecycleOption.SendToRecycleBin;
-                    if (!settings.MoveToTrash) sendToTrash = Microsoft.VisualBasic.FileIO.RecycleOption.DeletePermanently;
+                    var sendToTrash = RecycleOption.SendToRecycleBin;
+                    if (!settings.MoveToTrash) sendToTrash = RecycleOption.DeletePermanently;
                     var directory = new DirectoryInfo(settings.WebPath);
                     foreach (FileInfo file in directory.EnumerateFiles())
                     {
-                        Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile(file.FullName, Microsoft.VisualBasic.FileIO.UIOption.OnlyErrorDialogs, sendToTrash);
+                        FileSystem.DeleteFile(file.FullName, UIOption.OnlyErrorDialogs, sendToTrash);
                     }
                     foreach (DirectoryInfo dir in directory.EnumerateDirectories())
                     {
-                        Microsoft.VisualBasic.FileIO.FileSystem.DeleteDirectory(dir.FullName, Microsoft.VisualBasic.FileIO.UIOption.OnlyErrorDialogs, sendToTrash);
+                        FileSystem.DeleteDirectory(dir.FullName, UIOption.OnlyErrorDialogs, sendToTrash);
                     }
                 }
             }
         }
+
+        private string GenerateFilename(SaveType type,string originalFilename = null)
+        {
+            switch (type)
+            {
+                case SaveType.Screenshot:
+                    return DateTime.Now.ToString(settings.ScreenshotDateTimeFormatString, CultureInfo.InvariantCulture) + ".jpeg";
+                    
+                case SaveType.Zip:
+                    return GenerateFilenameForZip(originalFilename);
+
+                case SaveType.File:
+                    return GenerateFilenameForFile(originalFilename);
+            }
+            throw new InvalidEnumArgumentException("Invalid SaveType");
+        }
+
+        private string GenerateFilenameForZip(string originalFilename = null)
+        {
+            if (string.IsNullOrEmpty(originalFilename))
+            {
+                return settings.WebPath + Guid.NewGuid() + ".zip";
+            }
+            int i = 0;
+            while (File.Exists(settings.WebPath + Uri.EscapeDataString(new DirectoryInfo(originalFilename).Name) + (i == 0 ? "" : i.ToString(CultureInfo.InvariantCulture)) + ".zip"))
+            {
+                i++;
+            }
+            return settings.WebPath + Uri.EscapeDataString(new DirectoryInfo(originalFilename).Name) + (i == 0 ? "" : i.ToString(CultureInfo.InvariantCulture)) + ".zip";
+        }
+
+        private string GenerateFilenameForFile(string originalFilename = null)
+        {
+
+            if (File.Exists(settings.WebPath + Uri.EscapeDataString(Path.GetFileName(originalFilename)))) {
+                int i = 0;
+                while(File.Exists(settings.WebPath + Uri.EscapeDataString(Path.GetFileNameWithoutExtension(originalFilename) + i.ToString(CultureInfo.InvariantCulture) + Path.GetExtension(originalFilename))))
+                {
+                    i++;
+                }
+                return settings.WebPath + Uri.EscapeDataString(Path.GetFileNameWithoutExtension(originalFilename) + i.ToString(CultureInfo.InvariantCulture) + Path.GetExtension(originalFilename));
+            }
+            else
+            {
+                return settings.WebPath + Uri.EscapeDataString(Path.GetFileName(originalFilename));
+            }
+        }
+
+        private string GetExternalAdressFromPath(string path)
+        {
+            return settings.ExternalAdress + Path.GetFileName(path);
+        }
     }
+}
+
+enum SaveType
+{
+    Screenshot, Zip, File
 }

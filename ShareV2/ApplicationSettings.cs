@@ -13,10 +13,9 @@ namespace ShareV2
         public bool MoveToTrash { get; set; }
         public List<ModifierKeys> ModifierKeys { get; set; }
         public Keys Key { get; set; }
-
         public string ScreenshotDateTimeFormatString { get; set; }
         public bool ShouldShowProgressbar { get; set; }
-
         public int PopProgressDialogThreshold { get; set; }
+        public bool ShouldAutoResolveFilenames { get; set; }
     }
 }

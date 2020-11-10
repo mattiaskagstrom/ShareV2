@@ -1,11 +1,15 @@
 ﻿using Microsoft.Win32;
+using ShareV2.Properties;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Resources;
 using System.Text.Json;
 using System.Windows.Forms;
+using static ShareV2.DrawingFormOverlay;
 
 namespace ShareV2
 {
@@ -16,6 +20,8 @@ namespace ShareV2
         static readonly ApplicationSettings settings = LoadSettings(SettingsPath);
         FileManagement FileManagement;
         readonly LogForm logForm = new LogForm();
+        readonly List<Form> overlayForms = new List<Form>();
+        RecorderForm recorderForm;
         public SettingsForm()
         {
             InitializeComponent();
@@ -29,11 +35,11 @@ namespace ShareV2
             SystemEvents.SessionEnding += SystemEvents_SessionEnding;
             DropdownModifier1.SelectedIndex = DropdownModifier1.FindString(settings.ModifierKeys[0].ToString());
             DropdownModifier2.SelectedIndex = DropdownModifier2.FindString(settings.ModifierKeys[1].ToString());
-            DropdownKey.SelectedIndex = DropdownKey.FindString(settings.Key.ToString().ToUpper());
+            DropdownKey.SelectedIndex = DropdownKey.FindString(settings.Key.ToString().ToUpper(CultureInfo.InvariantCulture));
             TxtScreenshotDateTimeFormatString.Text = settings.ScreenshotDateTimeFormatString;
             ChbShouldShowProgressbar.Checked = settings.ShouldShowProgressbar;
             TxtThreshold.Enabled = settings.ShouldShowProgressbar;
-            TxtThreshold.Text = settings.PopProgressDialogThreshold.ToString();
+            TxtThreshold.Text = settings.PopProgressDialogThreshold.ToString(CultureInfo.InvariantCulture);
             SetKeyboardHook();
             FileManagement = new FileManagement(settings, logForm);
             this.Hide();
@@ -50,8 +56,8 @@ namespace ShareV2
                 Hook.RegisterHotKey(settings.ModifierKeys[0] | settings.ModifierKeys[1], settings.Key);
             }
             catch
-            {
-                MessageBox.Show("Key kombination in use by other app, try another one.");
+            {                
+                MessageBox.Show(Resources.HookInUse);
             }
 
         }
@@ -201,7 +207,7 @@ namespace ShareV2
             SaveChanges();
         }
 
-        public string ReadResource(string name)
+        public static string ReadResource(string name)
         {
             // Determine path
             var assembly = Assembly.GetExecutingAssembly();
@@ -209,14 +215,12 @@ namespace ShareV2
             // Format: "{Namespace}.{Folder}.{filename}.{Extension}"
 
             resourcePath = assembly.GetManifestResourceNames()
-                .Single(str => str.EndsWith(name));
+                .Single(str => str.EndsWith(name, StringComparison.InvariantCultureIgnoreCase));
 
 
-            using (Stream stream = assembly.GetManifestResourceStream(resourcePath))
-            using (StreamReader reader = new StreamReader(stream))
-            {
-                return reader.ReadToEnd();
-            }
+            using Stream stream = assembly.GetManifestResourceStream(resourcePath);
+            using StreamReader reader = new StreamReader(stream);
+            return reader.ReadToEnd();
         }
 
         private void SettingsForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -308,7 +312,7 @@ namespace ShareV2
                 if (Directory.Exists(TxtWebLocation.Text))
                 {
                     LblDirNotExisting.Visible = false;
-                    settings.WebPath = folderBrowserDialog1.SelectedPath + "\\";
+                    settings.WebPath = TxtWebLocation.Text;
 
                     if (Directory.GetFiles(settings.WebPath).Length > 0)
                     {
@@ -318,7 +322,7 @@ namespace ShareV2
                 }
                 else
                 {
-                    LblDirNotExisting.Visible = true;
+                    LblDirNotExisting.Visible = true;                    
                 }
             }
         }
@@ -348,7 +352,7 @@ namespace ShareV2
 
         private void TxtThreshold_TextChanged(object sender, EventArgs e)
         {
-            settings.PopProgressDialogThreshold = int.Parse(TxtThreshold.Text);
+            settings.PopProgressDialogThreshold = int.Parse(TxtThreshold.Text, CultureInfo.InvariantCulture);
             SaveChanges();
         }
 
@@ -356,5 +360,44 @@ namespace ShareV2
         {
             logForm.Show();
         }
+
+        private void ChbShouldAutoSolveFilenameConflicts_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            foreach(var screen in Screen.AllScreens)
+            {
+                var form = new DrawingFormOverlay
+                {
+                    Location = screen.Bounds.Location,
+                    Height = screen.Bounds.Height,
+                    Width = screen.Bounds.Width
+                };
+                form.AreaSelected += new EventHandler<AreaSelectedEventArgs>(RecordingAreaSelected);
+                overlayForms.Add(form);
+                form.Show();
+            }
+        }
+
+        void RecordingAreaSelected(object sender, AreaSelectedEventArgs e)
+        {
+            recorderForm = new RecorderForm
+            {
+                Location = e.SelectedArea.Location,
+                Width = e.SelectedArea.Width,
+                Height = e.SelectedArea.Height
+            };
+            foreach (Form form in overlayForms)
+            {
+                form.Close();
+            }
+            recorderForm.Show();
+        }
+
+        
     }
 }

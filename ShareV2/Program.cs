@@ -13,7 +13,8 @@ namespace ShareV2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SettingsForm());
+            using var form = new SettingsForm();
+            Application.Run(form);
         }
     }
 }
